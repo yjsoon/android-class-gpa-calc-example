@@ -1,20 +1,29 @@
 package com.example.yinjiesoon.gpacalculator;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
 
-
     public static final String POTATOES = "potatoes";
-    
+    private ArrayList<GradeItem> mGradeItems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mGradeItems = new ArrayList<GradeItem>();
+
+        //.......
+        GradeItem g = new GradeItem("Homework 1", 0, 10, 50);
+        mGradeItems.add(g);
+
     }
 
 
